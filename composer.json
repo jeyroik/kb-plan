@@ -1,6 +1,6 @@
 {
   "name": "jeyroik/kb-plan",
-  "description": "Book package for Kilobook",
+  "description": "Plan package for Kilobook",
   "require": {
     "jeyroik/extas-foundation":"*",
     "jeyroik/extas-installer":"*",
