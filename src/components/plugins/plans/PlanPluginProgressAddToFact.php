@@ -1,5 +1,5 @@
 <?php
-namespace df\components\plugins\plans;
+namespace extas\components\plugins\plans;
 
 use Carbon\Carbon;
 use extas\components\plans\facts\PlanFact;

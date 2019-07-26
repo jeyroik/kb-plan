@@ -31,6 +31,28 @@ class Plan extends Item implements IPlan
     protected $planProgressRepo = IPlanProgressRepository::class;
 
     /**
+     * @override_it
+     *
+     * @return string
+     */
+    protected function getPlanSubject()
+    {
+        return 'kb.plan';
+    }
+
+    /**
+     * @override_it
+     *
+     * @param array $data
+     *
+     * @return IPlanProgress
+     */
+    protected function getPlanProgress($data)
+    {
+        return new PlanProgress($data);
+    }
+
+    /**
      * @param $parameters
      *
      * @return $this
@@ -65,28 +87,6 @@ class Plan extends Item implements IPlan
         }
 
         return $this;
-    }
-
-    /**
-     * @override_it
-     *
-     * @return string
-     */
-    protected function getPlanSubject()
-    {
-        return 'kb.plan';
-    }
-
-    /**
-     * @override_it
-     *
-     * @param array $data
-     *
-     * @return IPlanProgress
-     */
-    protected function getPlanProgress($data)
-    {
-        return new PlanProgress($data);
     }
 
     /**
